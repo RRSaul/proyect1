@@ -1,4 +1,4 @@
-# Proyecto I Introducción a la ciencias de la computación
+# Proyecto I Introducción a las ciencias de la computación
 En este lugar se aloja el primer proyecto de la materia <b> Introducción a las ciencias de la computación </b> el programa está escrito en Java, se implementarán los conocimientos adquiridos en las primeras 5 prácticas de laboratorio, se han cubierto los siguientes temas
 - [x] Herencia
 - [x] Polimorfismo
@@ -6,6 +6,9 @@ En este lugar se aloja el primer proyecto de la materia <b> Introducción a las 
 - [x] Excepciones
 
 - - - -
+#### Finalidad
+
+Aquí dice qué se hará esto ;)
 
 ## Profesores
 * Prof. Canek Peláez Valdés
