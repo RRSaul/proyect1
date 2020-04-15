@@ -121,7 +121,7 @@ public abstract class BaseDeDatos {
      *         correcta.
      */
     public Lista buscaRegistros(Enum campo, Object valor) {
-        if(!(campo instanceof CampoEstudiante))
+        if(!(campo instanceof CampoPokemon))
             throw new IllegalArgumentException();
         Lista l = new Lista();
         Lista.Nodo n = registros.getCabeza();

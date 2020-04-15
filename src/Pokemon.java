@@ -5,32 +5,34 @@
  * texto; además de determinar si sus campos cazan valores arbitrarios y
  * actualizarse con los valores de otro estudiante.
  */
-public class Estudiante implements Registro {
+public class Pokemon implements Registro {
 
     /* Nombre del estudiante. */
     private String nombre;
     /* Número de cuenta. */
-    private int cuenta;
+    private int numPokedex;
     /* Pormedio del estudiante. */
-    private double promedio;
-    /* Edad del estudiante.*/
-    private int edad;
+    private double podAtq;
+    /*Tipo primario del Pokemon*/
+    private String tipoPrim;
+    /*Tipo segundario del Pokemon*/
+    private String tipoSegu;
+
 
     /**
      * Define el estado inicial de un estudiante.
      * @param nombre el nombre del estudiante.
-     * @param cuenta el número de cuenta del estudiante.
-     * @param promedio el promedio del estudiante.
+     * @param numPokedex el número de cuenta del estudiante.
+     * @param podAtq el promedio del estudiante.
      * @param edad la edad del estudiante.
      */
-    public Estudiante(String nombre,
-                      int    cuenta,
-                      double promedio,
-                      int    edad) {
+    public Pokemon(String nombre,
+                   int numPokedex,
+                   double podAtq,
+                   int    edad) {
         this.nombre = nombre;
-        this.cuenta = cuenta;
-        this.promedio = promedio;
-        this.edad = edad;
+        this.numPokedex = numPokedex;
+        this.podAtq = podAtq;
     }
     /**
      * Regresa el nombre del estudiante.
@@ -52,60 +54,76 @@ public class Estudiante implements Registro {
      * Regresa el número de cuenta del estudiante.
      * @return el número de cuenta del estudiante.
      */
-    public int getCuenta() {
-        return cuenta;
+    public int getNumPokedex() {
+        return numPokedex;
     }
 
     /**
      * Define el número cuenta del estudiante.
-     * @param cuenta el nuevo número de cuenta del estudiante.
+     * @param numPokedex el nuevo número de cuenta del estudiante.
      */
-    public void setCuenta(int cuenta) {
-        this.cuenta = cuenta;
+    public void setNumPokedex(int numPokedex) {
+        this.numPokedex = numPokedex;
     }
 
     /**
      * Regresa el promedio del estudiante.
      * @return el promedio del estudiante.
      */
-    public double getPromedio() {
-        return promedio;
+    public double getPodAtq() {
+        return podAtq;
     }
 
     /**
      * Define el promedio del estudiante.
-     * @param promedio el nuevo promedio del estudiante.
+     * @param podAtq el nuevo promedio del estudiante.
      */
-    public void setPromedio(double promedio) {
-        this.promedio = promedio;
+    public void setPodAtq(double podAtq) {
+        this.podAtq = podAtq;
+    }
+
+
+    /**
+     * Regresa el nombre del estudiante.
+     * @return el nombre del estudiante.
+     */
+    public String getTipoPrim() {
+        return tipoPrim;
     }
 
     /**
-     * Regresa la edad del estudiante.
-     * @return la edad del estudiante.
+     * Define el nombre del estudiante.
+     * @param nombre el nuevo nombre del estudiante.
      */
-    public int getEdad() {
-        return edad;
+    public void setTipoSegu(String tipoSegu) {
+        this.tipoSegu = tipoSegu;
+    }
+    /**
+     * Regresa el nombre del estudiante.
+     * @return el nombre del estudiante.
+     */
+    public String getTipoSegu() {
+        return tipoSegu;
     }
 
     /**
-     * Define la edad del estudiante.
-     * @param edad la nueva edad del estudiante.
+     * Define el nombre del estudiante.
+     * @param nombre el nuevo nombre del estudiante.
      */
-    public void setEdad(int edad) {
-        this.edad = edad;
+    public void setTipoPrim(String tipoPrim) {
+        this.tipoPrim = tipoPrim;
     }
-
     /**
      * Regresa una representación en cadena del estudiante.
      * @return una representación en cadena del estudiante.
+     *
      */
     @Override public String toString() {
         return String.format("Nombre   : %s\n" +
                         "Cuenta   : %09d\n" +
                         "Promedio : %2.2f\n" +
                         "Edad     : %d",
-                nombre, cuenta, promedio, edad);
+                nombre, numPokedex, podAtq, tipoPrim, tipoSegu);
     }
 
     /**
@@ -117,11 +135,11 @@ public class Estudiante implements Registro {
      *         <code>false</code> en otro caso.
      */
     @Override public boolean equals(Object objeto) {
-        if (!(objeto instanceof Estudiante))
+        if (!(objeto instanceof Pokemon))
             return false;
-        Estudiante e = (Estudiante)objeto;
-        if((e.nombre.equals(nombre)) && (e.cuenta == cuenta) &&
-                (e.promedio == promedio) && (e.edad == edad))
+        Pokemon e = (Pokemon)objeto;
+        if((e.nombre.equals(nombre)) && (e.numPokedex == numPokedex) &&
+                (e.podAtq == podAtq) && (e.tipoPrim.equals(tipoPrim)) && (e.tipoSegu.equals(tipoSegu)))
             return true;
         return false;
     }
@@ -130,18 +148,18 @@ public class Estudiante implements Registro {
     /**
      * Regresa el estudiante serializado en una línea de texto. La línea de
      * texto que este método regresa debe ser aceptada por el método {@link
-     * Estudiante#deserializa}.
+     * Pokemon#deserializa}.
      * @return la serialización del estudiante en una línea de texto.
      */
     @Override public String serializa() {
         return String.format("%s\t%d\t%2.2f\t%d\n",
-                nombre, cuenta, promedio, edad);
+                nombre, numPokedex, podAtq, edad);
         // Aquí va su código.
     }
 
     /**
      * Deserializa una línea de texto en las propiedades del estudiante. La
-     * serialización producida por el método {@link Estudiante#serializa} debe
+     * serialización producida por el método {@link Pokemon#serializa} debe
      * ser aceptada por este método.
      * @param linea la línea a deserializar.
      * @throws ExcepcionLineaInvalida si la línea recibida es nula, vacía o no
@@ -155,13 +173,13 @@ public class Estudiante implements Registro {
            throw new ExcepcionLineaInvalida("El registro no es un estudiante");
        this.nombre =  t[0];
        try {
-           this.cuenta = (int)Integer.parseInt(t[1]);
+           this.numPokedex = (int)Integer.parseInt(t[1]);
 
        }catch (NumberFormatException e){
            System.out.println(e);
        }
        String proaux = t[2].replace(",", ".");
-       this.promedio = Double.valueOf(proaux);
+       this.podAtq = Double.valueOf(proaux);
        this.edad = Integer.parseInt(t[3]);
     }   // Aquí va su código.
 
@@ -170,16 +188,17 @@ public class Estudiante implements Registro {
      * Actualiza los valores del estudiante con los del registro recibido.
      * @param registro el registro con el cual actualizar los valores.
      * @throws IllegalArgumentException si el registro no es instancia de {@link
-     *         Estudiante}.
+     *         Pokemon}.
      */
     public void actualiza(Registro registro) {
-        if (!(registro instanceof Estudiante)){
+        if (!(registro instanceof Pokemon)){
         throw new IllegalArgumentException("Tas mal bro, no es instancia de estudiante");}
-        Estudiante ac =(Estudiante)registro;
+        Pokemon ac =(Pokemon)registro;
         this.nombre = ac.nombre;
-        this.cuenta = ac.cuenta;
-        this.promedio = ac.promedio;
-        this.edad = ac.edad;
+        this.numPokedex = ac.numPokedex;
+        this.podAtq = ac.podAtq;
+        this.tipoPrim = ac.tipoPrim;
+        this.tipoSegu = ac.tipoSegu;
 
         // Aquí va su código.
     }
@@ -190,39 +209,39 @@ public class Estudiante implements Registro {
      * @param valor el valor con el que debe cazar el campo del registro.
      * @return <code>true</code> si:
      *         <ul>
-     *           <li><code>campo</code> es {@link CampoEstudiante#NOMBRE} y
+     *           <li><code>campo</code> es {@link CampoPokemon#NOMBRE} y
      *              <code>valor</code> es instancia de {@link String} y es una
      *              subcadena del nombre del estudiante.</li>
-     *           <li><code>campo</code> es {@link CampoEstudiante#CUENTA} y
+     *           <li><code>campo</code> es {@link CampoPokemon#NUMPOKEMON} y
      *              <code>valor</code> es instancia de {@link Integer} y su
      *              valor entero es menor o igual a la cuenta del
      *              estudiante.</li>
-     *           <li><code>campo</code> es {@link CampoEstudiante#PROMEDIO} y
+     *           <li><code>campo</code> es {@link CampoPokemon#PODATQ} y
      *              <code>valor</code> es instancia de {@link Double} y su
      *              valor doble es menor o igual al promedio del
      *              estudiante.</li>
-     *           <li><code>campo</code> es {@link CampoEstudiante#EDAD} y
+     *           <li><code>campo</code> es {@link CampoPokemon#TIPOPRIM} y
      *              <code>valor</code> es instancia de {@link Integer} y su
      *              valor entero es menor o igual a la edad del
      *              estudiante.</li>
      *         </ul>
      *         <code>false</code> en otro caso.
      * @throws IllegalArgumentException si el campo no es instancia de {@link
-     *         CampoEstudiante}.
+     *         CampoPokemon}.
      */
     public boolean caza(Enum campo, Object valor) {
-        if (!(campo instanceof CampoEstudiante))
+        if (!(campo instanceof CampoPokemon))
             throw new IllegalArgumentException("El campo debe ser " +
                     "CampoEstudiante");
-        CampoEstudiante c = (CampoEstudiante)campo;
+        CampoPokemon c = (CampoPokemon)campo;
         switch(c){
             case NOMBRE:
                 return cazaNombre(valor);
-            case CUENTA:
+            case NUMPOKEMON:
                 return cazaCuenta(valor);
-            case EDAD:
+            case TIPOPRIM:
                 return cazaEdad(valor);
-            case PROMEDIO:
+            case PODATQ:
                 return cazaPromedio(valor);
             default:
                 return false;
@@ -237,7 +256,7 @@ public class Estudiante implements Registro {
     private boolean cazaCuenta(Object o){
         if(!(o instanceof Integer)) return false;
         Integer v = (Integer) o;
-        return cuenta>= v;
+        return numPokedex >= v;
     }
     private boolean cazaEdad(Object o){
         if(!(o instanceof Integer)) return false;
@@ -247,6 +266,6 @@ public class Estudiante implements Registro {
     private boolean cazaPromedio(Object o){
         if(!(o instanceof Double)) return false;
         Double v = (Double) o;
-        return promedio>= v;
+        return podAtq >= v;
     }
 }
