@@ -29,10 +29,8 @@ public class Pokemon implements Registro {
     public Pokemon(String nombre,
                    int numPokedex,
                    double podAtq,
-                   int    edad) {
-        this.nombre = nombre;
-        this.numPokedex = numPokedex;
-        this.podAtq = podAtq;
+                   String tipoPrim,
+                   String tipoSegu) {
     }
     /**
      * Regresa el nombre del estudiante.
@@ -96,6 +94,10 @@ public class Pokemon implements Registro {
      * @param nombre el nuevo nombre del estudiante.
      */
     public void setTipoSegu(String tipoSegu) {
+        if (this.tipoPrim == null)
+            setTipoPrim(tipoSegu);
+        if (tipoSegu==this.tipoPrim)
+            return;
         this.tipoSegu = tipoSegu;
     }
     /**
@@ -103,6 +105,8 @@ public class Pokemon implements Registro {
      * @return el nombre del estudiante.
      */
     public String getTipoSegu() {
+        if (this.tipoSegu == null )
+            return "el Pokemon solo tiene tipo primario y es"+getTipoPrim();
         return tipoSegu;
     }
 

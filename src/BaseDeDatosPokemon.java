@@ -8,7 +8,7 @@ public class BaseDeDatosPokemon extends BaseDeDatos {
      * @return un estudiante en blanco.
      */
     @Override public Registro creaRegistro() {
-        return new Pokemon(null, 0, 0.0, 0);
+        return new Pokemon(null, 0, 0.0,null,null);
     }
 
 }
