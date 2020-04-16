@@ -141,11 +141,12 @@ public class Pokemon implements Registro {
      *
      */
     @Override public String toString() {
-        return String.format("Nombre   : %s\n" +
-                        "Cuenta   : %09d\n" +
-                        "Promedio : %2.2f\n" +
-                        "Edad     : %d",
-                nombreomote, numPokedex, nivel, tipoPrim, tipoSegu);
+        return String.format(": %s\n" +
+                        "%s\n" +
+                        "#  : %04d\n" +
+                        "Nivel : %2.2f\n" +
+                        "Tipos:%s\n" + "%s\n",
+                nombreomote, sexo, numPokedex, nivel, tipoPrim, tipoSegu);
     }
 
     /**
