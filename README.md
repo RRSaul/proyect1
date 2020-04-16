@@ -8,7 +8,8 @@ En este lugar se aloja el primer proyecto de la materia <b> Introducción a las 
 - - - -
 #### Finalidad
 
-Aquí dice qué se hará esto ;)
+* Esto es una base de datos de Pokemons, su funcion es emular 
+las cajas de PC vistas en los videojuegos.
 
 ## Profesores
 * Prof. Canek Peláez Valdés
@@ -18,11 +19,12 @@ Aquí dice qué se hará esto ;)
 ## Horarios
 Horario  | Día de la semana 
 ---------| -------------
-25:00  | Domingo
-25:00  | Domingo
-
+15:00-16:00  | Lunes
+16:00-19:30  | Martes
+15:00-16:00  | Miercoles
+16:00-19:30  | Jueves
 ### Contacto
 
-mail: 
+mail: wannacry@ciencias.unam.mx
 
 :octopus: :octopus: :octopus:

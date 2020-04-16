@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="67814c20-099b-49c6-acee-93d15a8792b9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BaseDeDatosPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BaseDeDatosPokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CampoPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CampoPokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pokemon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,9 +82,10 @@
       <screen x="0" y="0" width="2560" height="720" />
     </state>
     <state x="448" y="28" width="374" height="673" key="#com.intellij.ide.util.MemberChooser/0.0.2560.720@0.0.2560.720" timestamp="1586904488159" />
-    <state x="285" y="0" width="699" height="720" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586903930195">
-      <screen x="0" y="0" width="2560" height="720" />
+    <state x="152" y="0" width="408" height="768" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587065421690">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state x="152" y="0" width="408" height="768" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.768@0.0.1366.768" timestamp="1587065421690" />
     <state x="285" y="0" width="699" height="720" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.720@0.0.2560.720" timestamp="1586903930195" />
     <state x="373" y="96" width="524" height="537" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586904162864">
       <screen x="0" y="0" width="2560" height="720" />
@@ -102,58 +107,35 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1294" height="167" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1586394191230" />
-    <state x="281" y="0" width="707" height="720" key="RollbackChangesDialog" timestamp="1586904427992">
-      <screen x="0" y="0" width="2560" height="720" />
+    <state x="150" y="0" width="707" height="720" key="RollbackChangesDialog" timestamp="1587069746574">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state x="150" y="0" key="RollbackChangesDialog/0.0.1366.768@0.0.1366.768" timestamp="1587069746574" />
     <state x="281" y="0" width="707" height="720" key="RollbackChangesDialog/0.0.2560.720@0.0.2560.720" timestamp="1586904427992" />
-    <state x="298" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1586997774318">
+    <state x="298" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1587065023292">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="279" y="181" key="com.intellij.ide.util.TipDialog/0.0.1280.720/1280.0.1280.720@0.0.1280.720" timestamp="1586905232232" />
-    <state x="298" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1586997774318" />
+    <state x="298" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1587065023292" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Pokemon.java</url>
-          <line>120</line>
+          <line>142</line>
           <properties class="Pokemon" method="toString">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Pokemon.java</url>
-          <line>153</line>
-          <properties class="Pokemon" method="serializa">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Pokemon.java</url>
-          <line>167</line>
+          <line>189</line>
           <properties class="Pokemon" method="deserializa">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Pokemon.java</url>
-          <line>192</line>
-          <properties class="Pokemon" method="actualiza">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Pokemon.java</url>
-          <line>231</line>
-          <properties class="Pokemon" method="caza">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="5" />
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
