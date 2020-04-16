@@ -3,6 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="67814c20-099b-49c6-acee-93d15a8792b9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BaseDeDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mx/icc/BaseDeDatos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BaseDeDatosPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mx/icc/BaseDeDatosPokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CampoPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mx/icc/CampoPokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExcepcionIndiceInvalido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mx/icc/ExcepcionIndiceInvalido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExcepcionLineaInvalida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mx/icc/ExcepcionLineaInvalida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mx/icc/Lista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mx/icc/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mx/icc/Pokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Registro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mx/icc/Registro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,10 +32,10 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -44,7 +53,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="com.mx.icc.Main" />
       <module name="proyecto1" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -111,51 +120,5 @@
     </state>
     <state x="279" y="181" key="com.intellij.ide.util.TipDialog/0.0.1280.720/1280.0.1280.720@0.0.1280.720" timestamp="1586905232232" />
     <state x="298" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1586997774318" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Pokemon.java</url>
-          <line>120</line>
-          <properties class="Pokemon" method="toString">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Pokemon.java</url>
-          <line>153</line>
-          <properties class="Pokemon" method="serializa">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Pokemon.java</url>
-          <line>167</line>
-          <properties class="Pokemon" method="deserializa">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Pokemon.java</url>
-          <line>192</line>
-          <properties class="Pokemon" method="actualiza">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Pokemon.java</url>
-          <line>231</line>
-          <properties class="Pokemon" method="caza">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

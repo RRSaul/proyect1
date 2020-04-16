@@ -1,3 +1,5 @@
+package com.mx.icc;
+
 /**
  * Enumeración para los campos de un {@link Pokemon}.
  */
@@ -21,11 +23,11 @@ public enum CampoPokemon {
      */
     @Override public String toString() {
         switch(this){
-            case NOMBRE: return "Nombre del Pokemon";
-            case NUMPOKEMON: return "# Numero en la Pokedex del Pokemon";
-            case PODATQ: return "Poder de Ataque del Pokemon";
-            case TIPOPRIM: return "Tipo primario del Pokemon";
-            case TIPOSEGU:return "Tipo segundario del Pokemon";
+            case NOMBRE: return "Nombre del com.mx.icc.Pokemon";
+            case NUMPOKEMON: return "# Numero en la Pokedex del com.mx.icc.Pokemon";
+            case PODATQ: return "Poder de Ataque del com.mx.icc.Pokemon";
+            case TIPOPRIM: return "Tipo primario del com.mx.icc.Pokemon";
+            case TIPOSEGU:return "Tipo segundario del com.mx.icc.Pokemon";
             default: throw new IllegalArgumentException();
         }
     }

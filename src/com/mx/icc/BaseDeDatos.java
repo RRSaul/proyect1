@@ -1,3 +1,5 @@
+package com.mx.icc;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -8,12 +10,12 @@ import java.io.IOException;
  * puede hacer búsquedas con valores arbitrarios sobre los campos de los
  * registros.
  *
- * Las clases que extiendan a BaseDeDatos deben implementar el método {@link
+ * Las clases que extiendan a com.mx.icc.BaseDeDatos deben implementar el método {@link
  * #creaRegistro}, que crea un registro en blanco. 
  */
 public abstract class BaseDeDatos {
 
-    /* Lista de registros en la base de datos. */
+    /* com.mx.icc.Lista de registros en la base de datos. */
     private Lista registros;
 
     /**

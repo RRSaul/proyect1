@@ -1,3 +1,5 @@
+package com.mx.icc;
+
 /**
  * Clase para representar estudiantes. Un estudiante tiene nombre, número de
  * cuenta, promedio y edad. La clase implementa {@link Registro}, por lo que
@@ -7,15 +9,15 @@
  */
 public class Pokemon implements Registro {
 
-    /* Nombre del estudiante. */
+    /** Nombre del estudiante. */
     private String nombreomote;
-    /* Número de cuenta. */
+    /** Número de cuenta. */
     private int numPokedex;
-    /* Pormedio del estudiante. */
+    /** Pormedio del estudiante. */
     private double podAtq;
-    /*Tipo primario del Pokemon*/
+    /** Tipo primario del com.mx.icc.Pokemon*/
     private String tipoPrim;
-    /*Tipo segundario del Pokemon*/
+    /** Tipo segundario del com.mx.icc.Pokemon*/
     private String tipoSegu;
 
 
@@ -24,7 +26,9 @@ public class Pokemon implements Registro {
      * @param nombreomote el nombre del estudiante.
      * @param numPokedex el número de cuenta del estudiante.
      * @param podAtq el promedio del estudiante.
-     * @param edad la edad del estudiante.
+     * @param tipoPrim f
+     * @param tipoSegu f
+     *
      */
     public Pokemon(String nombreomote,
                    int numPokedex,
@@ -91,7 +95,7 @@ public class Pokemon implements Registro {
 
     /**
      * Define el nombre del estudiante.
-     * @param nombre el nuevo nombre del estudiante.
+     * @param tipoSegu el nuevo nombre del estudiante.
      */
     public void setTipoSegu(String tipoSegu) {
         if (this.tipoPrim == null)
@@ -106,13 +110,13 @@ public class Pokemon implements Registro {
      */
     public String getTipoSegu() {
         if (this.tipoSegu == null )
-            return "el Pokemon solo tiene tipo primario y es"+getTipoPrim();
+            return "el com.mx.icc.Pokemon solo tiene tipo primario y es"+getTipoPrim();
         return tipoSegu;
     }
 
     /**
      * Define el nombre del estudiante.
-     * @param nombre el nuevo nombre del estudiante.
+     * @param tipoPrim el nuevo nombre del estudiante.
      */
     public void setTipoPrim(String tipoPrim) {
         this.tipoPrim = tipoPrim;
@@ -124,9 +128,10 @@ public class Pokemon implements Registro {
      */
     @Override public String toString() {
         return String.format("Nombre   : %s\n" +
-                        "Cuenta   : %09d\n" +
-                        "Promedio : %2.2f\n" +
-                        "Edad     : %d",
+                        "Numero pokemon   : %09d\n" +
+                        "Poder de ataque : %2.2f\n" +
+                        "Tipo primero: %s\n" +
+                        "Tipo segndo:  %s\n",
                 nombreomote, numPokedex, podAtq, tipoPrim, tipoSegu);
     }
 
@@ -157,8 +162,7 @@ public class Pokemon implements Registro {
      */
     @Override public String serializa() {
         return String.format("%s\t%d\t%2.2f\t%d\n",
-                nombreomote, numPokedex, podAtq, edad);
-        // Aquí va su código.
+                nombreomote, numPokedex, podAtq, tipoPrim, tipoSegu);
     }
 
     /**
@@ -184,7 +188,7 @@ public class Pokemon implements Registro {
        }
        String proaux = t[2].replace(",", ".");
        this.podAtq = Double.valueOf(proaux);
-       this.edad = Integer.parseInt(t[3]);
+       //this.edad = Integer.parseInt(t[3]);
     }   // Aquí va su código.
 
 
@@ -265,7 +269,7 @@ public class Pokemon implements Registro {
     private boolean cazaEdad(Object o){
         if(!(o instanceof Integer)) return false;
         Integer v = (Integer) o;
-        return edad>= v;
+        return false;
     }
     private boolean cazaPromedio(Object o){
         if(!(o instanceof Double)) return false;

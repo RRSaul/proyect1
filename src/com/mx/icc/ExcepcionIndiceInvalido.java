@@ -1,3 +1,5 @@
+package com.mx.icc;
+
 /**
  * Clase para excepciones de índices de lista inválidos.
  */

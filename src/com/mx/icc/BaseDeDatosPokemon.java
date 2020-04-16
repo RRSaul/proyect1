@@ -1,3 +1,5 @@
+package com.mx.icc;
+
 /**
  * Clase para bases de datos de estudiantes.
  */
