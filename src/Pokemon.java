@@ -8,7 +8,7 @@
 public class Pokemon implements Registro {
 
     /* Nombre del estudiante. */
-    private String nombre;
+    private String nombreomote;
     /* Número de cuenta. */
     private int numPokedex;
     /* Pormedio del estudiante. */
@@ -21,12 +21,12 @@ public class Pokemon implements Registro {
 
     /**
      * Define el estado inicial de un estudiante.
-     * @param nombre el nombre del estudiante.
+     * @param nombreomote el nombre del estudiante.
      * @param numPokedex el número de cuenta del estudiante.
      * @param podAtq el promedio del estudiante.
      * @param edad la edad del estudiante.
      */
-    public Pokemon(String nombre,
+    public Pokemon(String nombreomote,
                    int numPokedex,
                    double podAtq,
                    String tipoPrim,
@@ -36,16 +36,16 @@ public class Pokemon implements Registro {
      * Regresa el nombre del estudiante.
      * @return el nombre del estudiante.
      */
-    public String getNombre() {
-        return nombre;
+    public String getNombreomote() {
+        return nombreomote;
     }
 
     /**
      * Define el nombre del estudiante.
-     * @param nombre el nuevo nombre del estudiante.
+     * @param nombreomote el nuevo nombre del estudiante.
      */
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreomote(String nombreomote) {
+        this.nombreomote = nombreomote;
     }
 
     /**
@@ -127,7 +127,7 @@ public class Pokemon implements Registro {
                         "Cuenta   : %09d\n" +
                         "Promedio : %2.2f\n" +
                         "Edad     : %d",
-                nombre, numPokedex, podAtq, tipoPrim, tipoSegu);
+                nombreomote, numPokedex, podAtq, tipoPrim, tipoSegu);
     }
 
     /**
@@ -142,7 +142,7 @@ public class Pokemon implements Registro {
         if (!(objeto instanceof Pokemon))
             return false;
         Pokemon e = (Pokemon)objeto;
-        if((e.nombre.equals(nombre)) && (e.numPokedex == numPokedex) &&
+        if((e.nombreomote.equals(nombreomote)) && (e.numPokedex == numPokedex) &&
                 (e.podAtq == podAtq) && (e.tipoPrim.equals(tipoPrim)) && (e.tipoSegu.equals(tipoSegu)))
             return true;
         return false;
@@ -157,7 +157,7 @@ public class Pokemon implements Registro {
      */
     @Override public String serializa() {
         return String.format("%s\t%d\t%2.2f\t%d\n",
-                nombre, numPokedex, podAtq, edad);
+                nombreomote, numPokedex, podAtq, edad);
         // Aquí va su código.
     }
 
@@ -175,7 +175,7 @@ public class Pokemon implements Registro {
        String t[] = linea.trim().split("\t");
        if (t.length != 4 || t[1].length()<5)
            throw new ExcepcionLineaInvalida("El registro no es un estudiante");
-       this.nombre =  t[0];
+       this.nombreomote =  t[0];
        try {
            this.numPokedex = (int)Integer.parseInt(t[1]);
 
@@ -198,7 +198,7 @@ public class Pokemon implements Registro {
         if (!(registro instanceof Pokemon)){
         throw new IllegalArgumentException("Tas mal bro, no es instancia de estudiante");}
         Pokemon ac =(Pokemon)registro;
-        this.nombre = ac.nombre;
+        this.nombreomote = ac.nombreomote;
         this.numPokedex = ac.numPokedex;
         this.podAtq = ac.podAtq;
         this.tipoPrim = ac.tipoPrim;
@@ -255,7 +255,7 @@ public class Pokemon implements Registro {
         if(!(o instanceof String))return false;
         String v = (String) o;
         if(v.isEmpty()) return false;
-        return nombre.contains(v);
+        return nombreomote.contains(v);
     }
     private boolean cazaCuenta(Object o){
         if(!(o instanceof Integer)) return false;
