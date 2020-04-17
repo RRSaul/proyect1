@@ -108,11 +108,11 @@
     </state>
     <state x="150" y="0" key="RollbackChangesDialog/0.0.1366.768@0.0.1366.768" timestamp="1587069746574" />
     <state x="281" y="0" width="707" height="720" key="RollbackChangesDialog/0.0.2560.720@0.0.2560.720" timestamp="1586904427992" />
-    <state x="298" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1587065023292">
+    <state x="298" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1587082453941">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="279" y="181" key="com.intellij.ide.util.TipDialog/0.0.1280.720/1280.0.1280.720@0.0.1280.720" timestamp="1586905232232" />
-    <state x="298" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1587065023292" />
+    <state x="298" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1587082453941" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
