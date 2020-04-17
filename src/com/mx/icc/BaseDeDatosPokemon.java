@@ -1,3 +1,5 @@
+package com.mx.icc;
+
 /**
  * Clase para bases de datos de Pokemons, actua como una caja en el PC visto en los videojuegos.
  */
