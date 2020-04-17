@@ -1,2 +1,10 @@
+
+# Cosas creadas por el ide
 .idea/
 *.xml
+*.iml
+out/
+
+
+#bye java
+.class
