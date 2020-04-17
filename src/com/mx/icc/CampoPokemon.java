@@ -25,12 +25,12 @@ public enum CampoPokemon {
      */
     @Override public String toString() {
         switch(this){
-            case NOMBREOMOTE: return "Nombre del Pokemon";
-            case NUMPOKEMON: return "Numero en la Pokedex del Pokemon";
-            case NIVEL: return "Nivel del Pokemon";
-            case SEXO: return "Sexo del Pokemon";
-            case TIPOPRIM: return "Tipo primario del Pokemon";
-            case TIPOSEGU:return "Tipo segundario del Pokemon";
+            case NOMBREOMOTE: return "Nombre: ";
+            case NUMPOKEMON: return "Numero en la Pokedex: ";
+            case NIVEL: return "Nivel ";
+            case SEXO: return "Sexo ";
+            case TIPOPRIM: return "Tipo primario ";
+            case TIPOSEGU:return "Tipo secundario ";
             default: throw new IllegalArgumentException();
         }
     }
