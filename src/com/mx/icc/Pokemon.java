@@ -8,7 +8,6 @@ package com.mx.icc;
  */
 public class Pokemon implements Registro {
 
-<<<<<<< HEAD:src/Pokemon.java
     /* Nombre o mote del Pokemon. */
     private String nombreomote;
     /* Número en la Pokemex Mundial. */
@@ -18,37 +17,20 @@ public class Pokemon implements Registro {
     /*El sexo del Pokemon*/
     private String sexo;
     /*Tipo primario del Pokemon*/
-=======
-    /** Nombre del estudiante. */
-    private String nombreomote;
-    /** Número de cuenta. */
-    private int numPokedex;
-    /** Pormedio del estudiante. */
-    private double podAtq;
-    /** Tipo primario del com.mx.icc.Pokemon*/
->>>>>>> b13789947fe023d5fe0da756f59cd1837584b7ba:src/com/mx/icc/Pokemon.java
     private String tipoPrim;
     /** Tipo segundario del com.mx.icc.Pokemon*/
     private String tipoSegu;
 
 
     /**
-<<<<<<< HEAD:src/Pokemon.java
      * Define el estado inicial de un Pokemon.
      * @param nombreomote el nombre del Pokemon,tambei puede ser un mote/apodo 
      *                    ya que la informacion de que Pokemon es esta en el numero de la Pokedex mundial.
      * @param numPokedex el número en la Pokedex mundial del Pokemon.
      * @param nivel el nivel con el porcentaje al siguiente nivel del Pokemon.
      * @param sexo el sexo del Pokemon.
-=======
-     * Define el estado inicial de un estudiante.
-     * @param nombreomote el nombre del estudiante.
-     * @param numPokedex el número de cuenta del estudiante.
-     * @param podAtq el promedio del estudiante.
      * @param tipoPrim f
      * @param tipoSegu f
-     *
->>>>>>> b13789947fe023d5fe0da756f59cd1837584b7ba:src/com/mx/icc/Pokemon.java
      */
     public Pokemon(String nombreomote,
                    int numPokedex,
@@ -130,13 +112,8 @@ public class Pokemon implements Registro {
     }
 
     /**
-<<<<<<< HEAD:src/Pokemon.java
      * Define el tipo segundario del Pokemon.
      * @param tipoSegu el nuevo tipo segundario del Pokemon, si es mismo que el primario actual no hace nada.
-=======
-     * Define el nombre del estudiante.
-     * @param tipoSegu el nuevo nombre del estudiante.
->>>>>>> b13789947fe023d5fe0da756f59cd1837584b7ba:src/com/mx/icc/Pokemon.java
      */
     public void setTipoSegu(String tipoSegu) {
         if (this.tipoPrim == null)
@@ -151,22 +128,13 @@ public class Pokemon implements Registro {
      */
     public String getTipoSegu() {
         if (this.tipoSegu == null )
-<<<<<<< HEAD:src/Pokemon.java
-            return "el Pokemon solo tiene tipo primario y es"+ getTipoPrim();
-=======
-            return "el com.mx.icc.Pokemon solo tiene tipo primario y es"+getTipoPrim();
->>>>>>> b13789947fe023d5fe0da756f59cd1837584b7ba:src/com/mx/icc/Pokemon.java
+            return nombreomote + " solo tiene tipo primario y es " + tipoPrim;
         return tipoSegu;
     }
 
     /**
-<<<<<<< HEAD:src/Pokemon.java
      * Define el tipo primario del Pokemon.
      * @param tipoPrim el tipo primario del Pokemon.
-=======
-     * Define el nombre del estudiante.
-     * @param tipoPrim el nuevo nombre del estudiante.
->>>>>>> b13789947fe023d5fe0da756f59cd1837584b7ba:src/com/mx/icc/Pokemon.java
      */
     public void setTipoPrim(String tipoPrim) {
         this.tipoPrim = tipoPrim;
@@ -177,21 +145,12 @@ public class Pokemon implements Registro {
      *
      */
     @Override public String toString() {
-<<<<<<< HEAD:src/Pokemon.java
         return String.format(": %s\n" +
                         "%s\n" +
                         "#  : %04d\n" +
                         "Nivel : %2.2f\n" +
                         "Tipos:%s\n" + "%s\n",
                 nombreomote, sexo, numPokedex, nivel, tipoPrim, tipoSegu);
-=======
-        return String.format("Nombre   : %s\n" +
-                        "Numero pokemon   : %09d\n" +
-                        "Poder de ataque : %2.2f\n" +
-                        "Tipo primero: %s\n" +
-                        "Tipo segndo:  %s\n",
-                nombreomote, numPokedex, podAtq, tipoPrim, tipoSegu);
->>>>>>> b13789947fe023d5fe0da756f59cd1837584b7ba:src/com/mx/icc/Pokemon.java
     }
 
     /**
@@ -220,13 +179,7 @@ public class Pokemon implements Registro {
      * @return la serialización del Pokemon en una línea de texto.
      */
     @Override public String serializa() {
-        return String.format("%s\t%d\t%2.2f\t%d\n",
-<<<<<<< HEAD:src/Pokemon.java
-                nombreomote, numPokedex, nivel, edad);
-        // Aquí va su código.
-=======
-                nombreomote, numPokedex, podAtq, tipoPrim, tipoSegu);
->>>>>>> b13789947fe023d5fe0da756f59cd1837584b7ba:src/com/mx/icc/Pokemon.java
+        return String.format("%s\t%d\t%2.2f\t%d\n");
     }
 
     /**
@@ -238,28 +191,22 @@ public class Pokemon implements Registro {
      *         es una serialización válida de un Pokemon.
      */
     @Override public void deserializa(String linea) {
-       if (linea == null || linea.trim().isEmpty() )
-           throw new ExcepcionLineaInvalida("La linea es nula o es vacia");
-       String t[] = linea.trim().split("\t");
-       if (t.length != 4 || t[1].length()<5)
-           throw new ExcepcionLineaInvalida("El registro no es un Pokemon");
-       this.nombreomote =  t[0];
-       try {
-           this.numPokedex = (int)Integer.parseInt(t[1]);
+        if (linea == null || linea.trim().isEmpty() )
+            throw new ExcepcionLineaInvalida("La linea es nula o es vacia");
+        String t[] = linea.trim().split("\t");
+        if (t.length != 4 || t[1].length()<5)
+            throw new ExcepcionLineaInvalida("El registro no es un Pokemon");
+        this.nombreomote =  t[0];
+        try {
+            this.numPokedex = (int)Integer.parseInt(t[1]);
 
-       }catch (NumberFormatException e){
-           System.out.println(e);
-       }
-       String proaux = t[2].replace(",", ".");
-<<<<<<< HEAD:src/Pokemon.java
-       this.nivel = Double.valueOf(proaux);
-       this.edad = Integer.parseInt(t[3]);
-=======
-       this.podAtq = Double.valueOf(proaux);
-       //this.edad = Integer.parseInt(t[3]);
->>>>>>> b13789947fe023d5fe0da756f59cd1837584b7ba:src/com/mx/icc/Pokemon.java
-    }   // Aquí va su código.
-
+        }catch (NumberFormatException e){
+            System.out.println(e);
+        }
+        String proaux = t[2].replace(",", ".");
+        this.nivel = Double.valueOf(proaux);
+        this.edad = Integer.parseInt(t[3]);
+    }
 
     /**
      * Actualiza los valores del Pokemon con los del registro recibido.
@@ -340,16 +287,7 @@ public class Pokemon implements Registro {
         Integer v = (Integer) o;
         return numPokedex >= v;
     }
-<<<<<<< HEAD:src/Pokemon.java
     private boolean cazaNivel(Object o){
-=======
-    private boolean cazaEdad(Object o){
-        if(!(o instanceof Integer)) return false;
-        Integer v = (Integer) o;
-        return false;
-    }
-    private boolean cazaPromedio(Object o){
->>>>>>> b13789947fe023d5fe0da756f59cd1837584b7ba:src/com/mx/icc/Pokemon.java
         if(!(o instanceof Double)) return false;
         Double v = (Double) o;
         return nivel >= v;
