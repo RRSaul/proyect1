@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67814c20-099b-49c6-acee-93d15a8792b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="67814c20-099b-49c6-acee-93d15a8792b9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,6 +67,40 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="COLUMN_WIDTH">
+                <map>
+                  <entry key="2" value="15" />
+                  <entry key="3" value="15" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="278" y="0" width="824" height="768" key="#Project_Structure" timestamp="1586390810901">
       <screen x="0" y="0" width="1366" height="768" />
@@ -86,6 +118,10 @@
       <screen x="0" y="0" width="2560" height="720" />
     </state>
     <state x="373" y="96" width="524" height="537" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.720@0.0.2560.720" timestamp="1586904162864" />
+    <state x="685" y="6" width="677" height="758" key="DiffContextDialog" timestamp="1587084181672">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="685" y="6" width="677" height="758" key="DiffContextDialog/0.0.1366.768@0.0.1366.768" timestamp="1587084181672" />
     <state width="1294" height="167" key="GridCell.Tab.0.bottom" timestamp="1586394191231">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -111,5 +147,9 @@
     </state>
     <state x="279" y="181" key="com.intellij.ide.util.TipDialog/0.0.1280.720/1280.0.1280.720@0.0.1280.720" timestamp="1586905232232" />
     <state x="298" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1586997774318" />
+    <state x="346" y="171" key="run.anything.popup" timestamp="1587084146561">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="346" y="171" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1587084146561" />
   </component>
 </project>
